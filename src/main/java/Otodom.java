@@ -4,6 +4,8 @@ import java.io.StringReader;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Otodom {
 
@@ -20,7 +22,7 @@ public class Otodom {
             stringBuilder.append(System.lineSeparator());
         }
         in.close();
-        List<String> listOfLinks = new ArrayList<>();
+        Set<String> listOfLinks = new TreeSet<>();
         String content = stringBuilder.toString();
 
         for(int i = 0; i < content.length(); i++){
